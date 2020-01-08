@@ -8,3 +8,8 @@ class HelloJava {
 
 }
 https://www.docker.com/sites/default/files/UseCase/RA_CI%20with%20Docker_08.25.2015.pdf
+
+sudo apt-get remove unscd
+sudo usermod -a -G docker $USER
+sudo usermod -aG docker jenkins
+sudo service jenkins restart
