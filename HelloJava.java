@@ -13,3 +13,8 @@ sudo apt-get remove unscd
 sudo usermod -a -G docker $USER
 sudo usermod -aG docker jenkins
 sudo service jenkins restart
+
+docker build --pull=true -t saurav242/node-web-app:$GIT_COMMIT .
+docker push saurav242/node-web-app:$GIT_COMMIT
+docker login -u "saurav242" -p "57d69324-9ef2-45d2-9b37-58976cdc8870" docker.io
+docker push saurav242/node-web-app:$GIT_COMMIT
